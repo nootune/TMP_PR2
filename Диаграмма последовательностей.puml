@@ -1,0 +1,11 @@
+@startuml
+actor "Клиент" as Client
+actor "Система идентификации карты" as Identification
+participant "Действия с картой" as Actions
+participant "Снятие денег со счёта" as Withdrawal
+participant "Выдача денег" as Extradition
+Client -> Identification : Вставить карту для идентификации
+Client -> Actions : Идентификация прошла успешно
+Actions -> Withdrawal : Расчёт остатка 
+Withdrawal -> Extradition : Сохранение информации о счёте
+@enduml

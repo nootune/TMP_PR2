@@ -1,0 +1,9 @@
+@startuml
+node "Сеть" as Net
+node "Сервер банка" as Server
+node "Банкомат 1" as ATM1
+node "Банкомат 2" as ATM2
+Net -r-- Server
+ATM1 -u-- Net
+ATM2 -u-- Net
+@enduml
